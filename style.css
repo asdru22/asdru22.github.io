@@ -1,0 +1,52 @@
+/* Reset */
+body,html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #202020;
+    font-family: 'Arial', sans-serif;
+    background-image: url('svg/background.svg'); /* Background image */
+    background-size: 30vw 80vh;
+    background-position: 76vw 0;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 5px 15px;
+    min-height: 200vh; /* Ensure enough scroll space */
+    color: white;
+}
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 8px;  /* Width of the scrollbar */
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+/* Style the track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    border-radius: 1px;         /* Rounded corners for track */
+}
+
+/* Style the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: #333;      /* Dark grey thumb */
+    border-radius: 10px;         /* Rounded corners for thumb */
+    border: 3px solid #202020;  /* Light border around the thumb */
+}
+
+/* Style the thumb on hover (to give a different look when hovered) */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #444;      /* Darker grey when hovered */
+}
+
+/* Optional: style the scrollbar buttons (arrows at the ends of the scrollbar) */
+::-webkit-scrollbar-button {
+    display: none;  /* Hide the scrollbar buttons (arrows) */
+}
