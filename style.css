@@ -9,8 +9,8 @@ body {
     background-color: #202020;
     font-family: 'Arial', sans-serif;
     background-image: url('svg/background.svg'); /* Background image */
-    background-size: 30vw 80vh;
-    background-position: 76vw 0;
+    background-size: 272px 512px;
+    background-position: 81vw 0;
     background-repeat: repeat-y;
     background-attachment: fixed;
 }

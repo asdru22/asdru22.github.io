@@ -9,5 +9,5 @@ window.addEventListener("scroll", () => {
     const translateY = -(scrollPosition * parallaxSpeed) % backgroundHeight;
 
     // Apply the offset while maintaining horizontal alignment
-    body.style.backgroundPosition = `76vw ${translateY}px`;
+    body.style.backgroundPosition = `81vw ${translateY}px`;
 });
