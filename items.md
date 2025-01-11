@@ -1,4 +1,4 @@
-# Totem of Reprieving
+# Totem of Reprieve
 ## Usage
 Triggers upon receiving lethal damage. If that damage was dealt by a mob the player receives 4s of Expiration, otherwise no effects are applied and the player remains at 1hp.
 Expiration grants resistance, but kills the player when it reaches 0s.
