@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asdru's Stuff</title>
+    <link rel="stylesheet" href="../../style.css"/>
+    <link rel="stylesheet" href="../items/items.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+<body>
+<article>
+    <header id="header">
+        <h3>Items</h3>
+    </header>
+    <div id="content">
+        <script>
+            async function loadMarkdown() {
+                try {
+                    const response = await fetch("/page/items/content.md");
+
+                    // Check if the file was successfully loaded
+                    if (!response.ok) throw new Error("Markdown file not found.");
+
+                    // Read text from the file
+                    const markdownText = await response.text();
+
+                    // Convert markdown to HTML using Marked
+                    let htmlContent = marked.parse(markdownText);
+
+                    // Create a container to hold each header 1 in its own div
+                    const container = document.createElement('div');
+
+                    // Split the content into sections based on the first level header (i.e., '#')
+                    const splitContent = htmlContent.split(/(<h1[^>]*>.*?<\/h1>)/g);
+
+                    let tempDiv = null;
+
+                    // Loop through each piece of split content
+                    splitContent.forEach((chunk) => {
+                        // If chunk is a header 1
+                        if (/^<h1[^>]*>/g.test(chunk)) {
+                            // Create a new div for the header 1
+                            if (tempDiv) container.appendChild(tempDiv); // Append previous div
+                            tempDiv = document.createElement('div');
+                            tempDiv.classList.add('header1'); // Add a class to style
+                            tempDiv.innerHTML = chunk;
+                        } else if (chunk.trim() !== "") {
+                            // If it's not a header 1, add it as content inside the current div
+                            if (!tempDiv) tempDiv = document.createElement('div');
+                            tempDiv.innerHTML += chunk;
+                        }
+                    });
+
+                    // Append the last div if it exists
+                    if (tempDiv) container.appendChild(tempDiv);
+
+                    // Inject the final HTML into the page
+                    document.getElementById("content").innerHTML = container.innerHTML;
+
+                } catch (error) {
+                    console.error("Error loading Markdown:", error);
+                    document.getElementById("content").innerHTML = "<p>Error loading content.</p>";
+                }
+            }
+
+            // Run the function when the page loads
+            window.onload = loadMarkdown;
+        </script>
+    </div>
+</article>
+</body>
+</html>

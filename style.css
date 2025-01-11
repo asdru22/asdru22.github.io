@@ -10,50 +10,30 @@ body {
     background-color: #202020;
     font-family: 'Arial', sans-serif;
     background-image: url('svg/background.svg'); /* Background image */
-    background-size: 544px 512px;
+    background-size: 50vw 100vh;
     background-position: 71vw 0;
     background-repeat: repeat-y;
-    background-attachment: fixed;
+    font-size: 1.5vw;
 }
 
+article{
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    gap:2vw;
+}
 header {
-    position: fixed;
-    z-index: 3;
-    top: 5px;
-    left: 10px;
-    width: 80vw;
-    padding: 10px 15px;
-    border-radius: 10px;
     font-size: 22px;
     color: white;
+    height:auto;
     background: linear-gradient(to right, rgb(25, 21, 85), #202020); /* Base gradient */
-    overflow: hidden; /* Ensure pseudo-elements stay contained */
 }
 
-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgb(25, 21, 85), rgb(64, 16, 60)); /* Hover gradient */
-    opacity: 0; /* Initially invisible */
-    transition: opacity 0.5s ease; /* Smooth transition */
-    z-index: -1; /* Layering */
+header h3{
+    padding-left: 2vw;
+    font-size: 2.5vw;
 }
 
-header:hover::after {
-    opacity: 1; /* Reveal hover gradient */
-}
-
-
-.content {
-    z-index: 2;
-    top:10px;
-    padding: 50px 20px;
-    min-height: 200vh; /* Ensure enough scroll space */
-}
 
 /* Style the scrollbar */
 ::-webkit-scrollbar {
@@ -81,4 +61,13 @@ header:hover::after {
 /* Optional: style the scrollbar buttons (arrows at the ends of the scrollbar) */
 ::-webkit-scrollbar-button {
     display: none;  /* Hide the scrollbar buttons (arrows) */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
 }

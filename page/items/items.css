@@ -1,0 +1,29 @@
+#content{
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    gap: 1vw;
+}
+
+#content div{
+    background-color: #303030;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+h1{
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 1.5vw;
+    text-decoration: underline;
+}
+
+code{
+    color: #2e6e81;
+}
