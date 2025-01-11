@@ -23,5 +23,5 @@ If the Aeroceptor is enchanted with Windlash, it will have a longer range, put o
 ## Technical Notes
 Use composite models to make a fake durability bar to display the charges.
 
-## Blocks
-Craft the Aeroceptor into a Ventilator block. The Ventilator stores wind charges and works like the aeroceptor, depliting one charge every 5 seconds. If powered by redstone, the Ventilator will instead pull entities towards it.
+## Ventilator
+The Aeroceptor is a crafting ingredient for Ventilator blocks. The Ventilator stores wind charges and works like the aeroceptor, depliting one charge every 5 seconds. If powered by redstone, the Ventilator will instead pull entities towards it.
