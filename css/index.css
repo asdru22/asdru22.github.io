@@ -1,14 +1,15 @@
 #content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2vw;
+    gap: 2rem;
     align-items: center;
-    padding: 2vw;
+    justify-content: center;
+    padding: 2rem;
 }
 
 #content a {
     background-color: #303030; /* Optional: background for visibility */
-    padding: 7px; /* Optional: padding inside each cell */
+    padding: 1rem; /* Optional: padding inside each cell */
     text-align: center; /* Optional: center text */
     border-radius: 5px; /* Rounded corners */
     border: 1px solid black; /* Optional: border for better visibility */

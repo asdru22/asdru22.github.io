@@ -10,30 +10,30 @@ body {
     background-color: #202020;
     font-family: 'Arial', sans-serif;
     background-image: url('../svg/background.svg'); /* Background image */
-    background-size: 50vw 100vh;
-    background-position: 71vw 0;
+    background-size: 50rem 100vh;
+    background-position: 60vw 0;
     background-repeat: repeat-y;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
 }
 
 article{
-    width: 85vw;
+    width: 65rem;
     display: flex;
     flex-direction: column;
-    gap:2vw;
+    gap:2rem;
 }
+
 header {
-    font-size: 22px;
+    font-size: 2rem;
     color: white;
     height:auto;
     background: linear-gradient(to right, rgb(25, 21, 85), #202020); /* Base gradient */
 }
 
 header h3{
-    padding-left: 2vw;
-    font-size: 2.5vw;
+    padding-left: 2rem;
+    font-size: 2rem;
 }
-
 
 /* Style the scrollbar */
 ::-webkit-scrollbar {
