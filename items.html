@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Asdru's Stuff</title>
-    <link rel="stylesheet" href="../../style.css"/>
-    <link rel="stylesheet" href="../items/items.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/items.css"/>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </head>
@@ -17,7 +17,7 @@
         <script>
             async function loadMarkdown() {
                 try {
-                    const response = await fetch("/page/items/content.md");
+                    const response = await fetch("/items.md");
 
                     // Check if the file was successfully loaded
                     if (!response.ok) throw new Error("Markdown file not found.");

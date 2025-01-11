@@ -9,7 +9,7 @@ body,html {
 body {
     background-color: #202020;
     font-family: 'Arial', sans-serif;
-    background-image: url('svg/background.svg'); /* Background image */
+    background-image: url('../svg/background.svg'); /* Background image */
     background-size: 50vw 100vh;
     background-position: 71vw 0;
     background-repeat: repeat-y;
