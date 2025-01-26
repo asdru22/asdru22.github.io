@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/items.css"/>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
 </head>
 <body>
 <article>
@@ -40,11 +39,31 @@
                     splitContent.forEach((chunk) => {
                         // If chunk is a header 1
                         if (/^<h1[^>]*>/g.test(chunk)) {
-                            // Create a new div for the header 1
-                            if (tempDiv) container.appendChild(tempDiv); // Append previous div
+                            // Append previous div if exists
+                            if (tempDiv) container.appendChild(tempDiv);
+
+                            // Create a new div for the header 1 and image
+                            const headerDiv = document.createElement('div');
+                            headerDiv.classList.add('header1'); // Add a class to style
+
+                            // Extract the text from the <h1> tag
+                            const tempDivContent = document.createElement('div');
+                            tempDivContent.innerHTML = chunk;
+                            const h1Element = tempDivContent.querySelector('h1');
+                            const headerText = h1Element.textContent.trim();
+
+                            // Add the header
+                            headerDiv.appendChild(h1Element);
+
+                            // Add the image
+                            const img = document.createElement('img');
+                            img.src = `img/${headerText}.png`;
+                            img.alt = `${headerText} image`;
+                            headerDiv.appendChild(img);
+
+                            // Create a parent div for the header and content
                             tempDiv = document.createElement('div');
-                            tempDiv.classList.add('header1'); // Add a class to style
-                            tempDiv.innerHTML = chunk;
+                            tempDiv.appendChild(headerDiv);
                         } else if (chunk.trim() !== "") {
                             // If it's not a header 1, add it as content inside the current div
                             if (!tempDiv) tempDiv = document.createElement('div');

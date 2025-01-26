@@ -1,30 +1,47 @@
-#content{
-    display: flex;
-    flex-direction: column;
-    padding: 1vw;
-    gap: 1vw;
-    width: auto;
+#content {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  gap: 1vw;
+  width: auto;
 }
 
-#content div{
-    background-color: #303030;
-    padding: 1vw;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1vw;
+#content > div {
+  background-color: #303030;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1vw;
 }
 
-h1{
-    text-align: center;
-    font-size: 2vw;
-    font-weight: bold;
+/* Header styling */
+.header1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5vw;
+  border-radius: 0.5vw;
 }
 
-h2{
-    font-size: 1.5vw;
-    text-decoration: underline;
+.header1 h1 {
+  margin: 0;
+  font-size: 2vw;
+  font-weight: bold;
 }
 
-code{
-    color: #2e6e81;
+.header1 img {
+  width: auto;
+  height: 2em; /* Scales the image to match the text height */
+  object-fit: contain;
+  margin-left: auto; /* Pushes the image to the right of the header if needed */
+}
+
+/* Other heading styles */
+h2 {
+  font-size: 1.5vw;
+  text-decoration: underline;
+}
+
+code {
+  color: #2e6e81;
 }
