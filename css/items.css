@@ -1,47 +1,52 @@
 #content {
   display: flex;
   flex-direction: column;
-  padding: 1vw;
-  gap: 1vw;
-  width: auto;
+  padding: 1rem;
+  gap: 1rem;
+  width: 100%;
 }
 
 #content > div {
   background-color: #303030;
-  padding: 1vw;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  border-radius: 1vw;
+  border-radius: 1rem;
+  box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 /* Header styling */
 .header1 {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0.5vw;
-  border-radius: 0.5vw;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allows items to wrap if space is limited */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .header1 h1 {
   margin: 0;
-  font-size: 2vw;
+  font-size: 1.5rem; /* Relative font size */
   font-weight: bold;
+  flex: 1; /* Allows the text to take up available space */
 }
 
 .header1 img {
+  image-rendering: pixelated; /* Retain sharpness for pixel art */
+  image-rendering: crisp-edges; /* For other types of non-pixelated images */
   width: auto;
-  height: 2em; /* Scales the image to match the text height */
+  height: 2rem;
   object-fit: contain;
-  margin-left: auto; /* Pushes the image to the right of the header if needed */
 }
 
 /* Other heading styles */
 h2 {
-  font-size: 1.5vw;
+  font-size: 1.2rem; /* Relative font size */
   text-decoration: underline;
 }
 
 code {
   color: #2e6e81;
+  font-size: 1rem; /* Ensures code text scales appropriately */
 }

@@ -1,34 +1,57 @@
+/* Main grid container */
 #content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2vw;
-    align-items: center;
-    padding: 2vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic columns */
+  gap: 2vw;
+  align-items: center;
+  padding: 2vw;
 }
 
+/* Individual links in the grid */
 #content a {
-    background-color: #303030; /* Optional: background for visibility */
-    padding: 7px; /* Optional: padding inside each cell */
-    text-align: center; /* Optional: center text */
-    border-radius: 5px; /* Rounded corners */
-    border: 1px solid black; /* Optional: border for better visibility */
-    height: auto;
-    color: white;
+  background-color: #303030; /* Dark background for contrast */
+  padding: 1em; /* Balanced padding */
+  text-align: center; /* Center text alignment */
+  border-radius: 8px; /* Softer rounded corners */
+  border: 1px solid black; /* Border for better distinction */
+  color: white;
+  transition: all 0.3s ease; /* Smooth hover effect */
 }
 
+/* Hover effect */
 #content a:hover {
-    background-color: #707070;
-    color: #00ffd9;
+  background-color: #505050; /* Slightly lighter background on hover */
+  color: #00ffd9; /* Bright text color on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Responsive styles for different screen sizes */
+@media (max-width: 1024px) {
+  #content {
+      gap: 1.5vw; /* Reduce gap for medium screens */
+      padding: 1.5vw;
+  }
 }
 
 @media (max-width: 768px) {
-    #content {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on smaller screens */
-    }
+  #content {
+      gap: 1vw; /* Smaller gap for small screens */
+      padding: 1vw;
+  }
+
+  #content a {
+      padding: 0.8em; /* Adjust padding for small screens */
+  }
 }
 
 @media (max-width: 480px) {
-    #content {
-        grid-template-columns: 1fr; /* Switch to 1 column on very small screens */
-    }
+  #content {
+      grid-template-columns: 1fr; /* Switch to a single column layout */
+      gap: 0.5vw; /* Minimal gap for small devices */
+      padding: 0.5vw;
+  }
+
+  #content a {
+      padding: 0.6em; /* Compact padding */
+  }
 }
